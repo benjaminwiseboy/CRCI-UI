@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="colorlib.com">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="assets/fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+   
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/request-form.css">
+
+</head>
+<body>
+
+    <div class="main">
+
+        <div class="container">
+            <form method="POST" id="signup-form" class="signup-form" enctype="multipart/form-data">
+                <h3>
+                   Utilisateur
+                </h3>
+                <fieldset>
+                    <div class="question" >
+                        <label class="title">Informations utilisateur</label>
+                        <label class="subtitle">Veuillez renseigner les informations par lesquelles nous pourrons vous identifier et vous contacter</label>
+                    </div>
+                    <div class="m-5">
+                        <div class="form-row">
+                        <div class="form-group">
+                            <label for="nom">Nom</label>
+                            <input type="text" name="nom" id="nom" placeholder="Ngabmen" />
+                        </div>
+                        <div class="form-group">
+                            <label for="prenom">Prenom</label>
+                            <input type="text" name="prenom" id="prenom" placeholder="Benjamin"/>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" placeholder="benjamin@mail.com"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="tel">Telephone</label>
+                            <input type="text" name="tel" id="tel" placeholder="000000000"/>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ville">Ville</label>
+                            <input type="text" name="ville" id="ville" placeholder="Ngaoundéré"/>
+                        </div>
+                    </div>
+                    </div>
+                    <br>
+                    
+                </fieldset>
+               
+                <h3>
+                  Cité
+                </h3>
+                <fieldset class="mb-4">
+                    <div class="question" >
+                        <label class="title">Distance à l'université</label>
+                        <label class="subtitle">Veuillez cocher les options qui vous conviennent. Nous ne prendrons en compte dans la recherche que les logements dont la distance est inclue dans les options cochées</label>
+                    </div>
+                                        
+                    <div class="d-flex justify-content-center mb-2">
+                        <div class="p-2 large-icon-button">
+                            <input type="checkbox" class="btn-check" name="dist_univ" id="dist_univ_proche" autocomplete="off">
+                            <label class="btn btn-outline-basic p-4" for="dist_univ_proche"><i class="zmdi zmdi-walk zmdi-hc-3x"></i> <br> Proche <br>(0-500m)  </label>
+                        </div>
+                        <div class="p-2 large-icon-button">
+                            <input type="checkbox" class="btn-check" name="dist_univ" id="dist_univ_moyen" autocomplete="off">
+                            <label class="btn btn-outline-basic p-4" for="dist_univ_proche"><i class="zmdi zmdi-bike zmdi-hc-3x"></i> <br> Moyen <br>(500m-5km)  </label>
+
+                        </div>
+                        <div class="p-2 large-icon-button">
+                            <input type="checkbox" class="btn-check" name="dist_univ" id="dist_univ_loin" autocomplete="off">
+                            <label class="btn btn-outline-basic p-4" for="dist_univ_loin"><i class="zmdi zmdi-car zmdi-hc-3x"></i> <br> Loin <br>(5km et plus)  </label>
+                        </div>                                     
+                    </div>
+                    <br><hr><br>
+                    <div class="question">
+                        <label class="title">Distance à la route</label>
+                        <label class="subtitle">Veuillez cocher les options qui vous conviennent. Nous ne prendrons en compte dans la recherche que les logements dont la distance est inclue dans les options cochées</label>
+                    </div>
+                    <div class="d-flex justify-content-center mb-2">
+                        <div class="p-2 large-icon-button">
+                            <input type="checkbox" class="btn-check" name="dist_route" id="dist_route_proche" autocomplete="off">
+                            <label class="btn btn-outline-basic p-4" for="dist_route_proche"><i class="zmdi zmdi-walk zmdi-hc-3x"></i> <br> Proche <br>(0-500m)  </label>
+                        </div>
+                        <div class="p-2 large-icon-button">
+                            <input type="checkbox" class="btn-check" name="dist_route" id="dist_route_moyen" autocomplete="off">
+                            <label class="btn btn-outline-basic p-4" for="dist_route_moyen"><i class="zmdi zmdi-bike zmdi-hc-3x"></i> <br> Moyen <br>(500m-5km)  </label>
+
+                        </div>
+                        <div class="p-2 large-icon-button">
+                            <input type="checkbox" class="btn-check" name="dist_route" id="dist_route_loin" autocomplete="off">
+                            <label class="btn btn-outline-basic p-4" for="dist_route_loin"><i class="zmdi zmdi-car zmdi-hc-3x"></i> <br> Loin <br>(5km et plus)  </label>
+                        </div>                                     
+                    </div>
+                    <br><hr><br>
+                    <div class="question">
+                        <label class="title">Spécifications de la cité</label>
+                        <label class="subtitle">Veuillez sélectionner les spécificités indispensables de la cité universitaire de vos rêves</label>
+                    </div>
+                    <div class="d-flex justify-content-center mb-2">
+                        <div class="p-2 large-icon-button">
+                            <input type="checkbox" class="btn-check" name="details_cite" id="details_cite_coloc" autocomplete="off" >
+                            <label class="btn btn-outline-basic p-3"  for="details_cite_coloc"> <i  class="fa fa-group fa-3x"></i> <br> Colocation permise  </label>
+                        </div>
+                        <div class="p-2 large-icon-button">
+                            <input type="checkbox" class="btn-check" name="details_cite" id="details_cite_toilettes" autocomplete="off" >
+                            <label class="btn btn-outline-basic p-3" for="details_cite_toilettes"><i class="zmdi zmdi-local-wc zmdi-hc-3x "></i> <br> Toilettes publiques  </label>
+                        </div>
+                        <div class="p-2 large-icon-button">
+                            <input type="checkbox" class="btn-check" name="details_cite" id="details_cite_couvre_feu" autocomplete="off" >
+                            <label class="btn btn-outline-basic p-3"  for="details_cite_couvre_feu"><i class="fa fa-clock-o fa-3x"></i> <br> Couvre feu défini </label>
+                        </div>
+                        <div class="p-2 large-icon-button">
+                            <input type="checkbox" class="btn-check" name="details_cite" id="details_cite_cloture" autocomplete="off" >
+                            <label class="btn btn-outline-basic p-3"  for="details_cite_cloture"><i class="zmdi zmdi-square-o zmdi-hc-3x"></i> <br> Cité avec clôture </label>
+                        </div>                                     
+                    </div>
+            
+                </fieldset>
+
+                <h3>
+                   Factures
+                </h3>
+                <fieldset>
+                   <div class="question" >
+                        <label class="title">Versement du premier loyer</label>
+                        <label class="subtitle">Souhaitez vous verser votre premier loyer avant ou après l'aménagement ?</label>
+                    </div>
+                    <div class="d-flex justify-content-center mb-2">
+                        <div class="p-2 large-icon-button">
+                            <input type="radio" class="btn-check" name="premier_loyer" id="premier_loyer_avant" autocomplete="off" checked>
+                            <label class="btn btn-outline-basic p-3" for="premier_loyer_avant"> Avant </label>
+                        </div>
+                        <div class="p-2 large-icon-button">
+                            <input type="radio" class="btn-check" name="premier_loyer" id="premier_loyer_apres" autocomplete="off" >
+                            <label class="btn btn-outline-basic p-3" for="premier_loyer_apres"> Après </label>
+                        </div>                               
+                    </div>
+                    <br><hr> <br>
+                    <div class="question" >
+                        <label class="title">Compteur d'eau</label>
+                        <label class="subtitle">Quelle est la répartition de compteur d'eau idéale pour vous ?</label>
+                    </div>
+                    <div class="d-flex justify-content-center mb-2">
+                        <div class="p-2 large-icon-button">
+                            <input type="radio" class="btn-check" name="compteur_eau" id="compteur_eau_prive" autocomplete="off" checked>
+                            <label class="btn btn-outline-basic p-3" for="compteur_eau_prive"> Privé </label>
+                        </div>
+                        <div class="p-2 large-icon-button">
+                            <input type="radio" class="btn-check" name="compteur_eau" id="compteur_eau_commun" autocomplete="off" >
+                            <label class="btn btn-outline-basic p-3" for="compteur_eau_commun"> Commun </label>
+                        </div>                               
+                    </div><br>
+                    <div class="question" >
+                        <label class="subtitle">Comment souhaitez vous payer vos factures d'eau ?</label>
+                    </div>
+                    <div class="d-flex justify-content-center mb-2">
+                        <div class="p-2 large-icon-button">
+                            <input type="radio" class="btn-check" name="facture_eau" id="facture_eau_caution" autocomplete="off" checked>
+                            <label class="btn btn-outline-basic p-3" for="facture_eau_caution"> Caution annuelle payée à l'aménagement </label>
+                        </div>
+                        <div class="p-2 large-icon-button">
+                            <input type="radio" class="btn-check" name="facture_eau" id="facture_eau_egale" autocomplete="off" >
+                            <label class="btn btn-outline-basic p-3" for="facture_eau_egale"> Facture égale entre tous les locataires de la cité </label>
+                        </div>
+                        <div class="p-2 large-icon-button">
+                            <input type="radio" class="btn-check" name="facture_eau" id="facture_eau_perso" autocomplete="off" >
+                            <label class="btn btn-outline-basic p-3" for="facture_eau_perso"> Facture sur la consommation personnelle </label>
+                        </div>                               
+                    </div>
+                    <br><hr><br>
+                    <div class="question" >
+                        <label class="title">Compteur d'électricité</label>
+                        <label class="subtitle">Quelle est la répartition de compteur d'électricité idéale pour vous ?</label>
+                    </div>
+                    <div class="d-flex justify-content-center mb-2">
+                        <div class="p-2 large-icon-button">
+                            <input type="radio" class="btn-check" name="compteur_elec" id="compteur_elec_prive" autocomplete="off" checked>
+                            <label class="btn btn-outline-basic p-3" for="compteur_elec_prive"> Privé </label>
+                        </div>
+                        <div class="p-2 large-icon-button">
+                            <input type="radio" class="btn-check" name="compteur_elec" id="compteur_elec_commun" autocomplete="off" >
+                            <label class="btn btn-outline-basic p-3" for="compteur_elec_commun"> Commun </label>
+                        </div>                               
+                    </div> <br>
+                    <div class="question" >
+                        <label class="subtitle">Comment souhaitez vous payer vos factures d'électricité ?</label>
+                    </div>
+                    <div class="d-flex justify-content-center mb-2">
+                        <div class="p-2 large-icon-button">
+                            <input type="radio" class="btn-check" name="facture_elec" id="facture_elec_caution" autocomplete="off" checked>
+                            <label class="btn btn-outline-basic p-3" for="facture_elec_caution"> Caution annuelle payée à l'aménagement </label>
+                        </div>
+                        <div class="p-2 large-icon-button">
+                            <input type="radio" class="btn-check" name="facture_elec" id="facture_elec_egale" autocomplete="off" >
+                            <label class="btn btn-outline-basic p-3" for="facture_elec_egale"> Facture égale entre tous les habitants de la cité </label>
+                        </div>
+                        <div class="p-2 large-icon-button">
+                            <input type="radio" class="btn-check" name="facture_elec" id="facture_elec_perso" autocomplete="off" >
+                            <label class="btn btn-outline-basic p-3" for="facture_elec_perso"> Facture sur la consommation personnelle </label>
+                        </div>                             
+                    </div>
+              </fieldset>
+                <h3>
+                   Chambre
+                </h3>
+                <fieldset>
+                    <div class="question">
+                        <label class="title">Catégorie de chambre</label>
+                        <label class="subtitle">Choisissez le(s) type(s) de chambre que vous désirez</label>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-stretch">
+                        <div class="p-2 large-icon-button">
+                            <input type="checkbox" class="btn-check" name="categorie_chambre" id="categorie_chambre_simple" autocomplete="off" >
+                            <label class="btn btn-outline-basic p-4 square-button"  for="categorie_chambre_simple" > Chambre simple </label>
+                        </div>
+                        <div class="p-2 large-icon-button">
+                            <input type="checkbox" class="btn-check" name="categorie_chambre" id="categorie_chambre_moderne" autocomplete="off" >
+                            <label class="btn btn-outline-basic p-3"  for="categorie_chambre_moderne"> Chambre moderne (avec douche interne)  </label>
+                        </div>
+                        <div class="p-2 large-icon-button">
+                            <input type="checkbox" class="btn-check" name="categorie_chambre" id="categorie_chambre_super_moderne" autocomplete="off" >
+                            <label class="btn btn-outline-basic p-3" for="categorie_chambre_super_moderne"> Chambre super moderne (douche interne + cuisine)  </label>
+                        </div>                             
+                    </div>
+                    <div class="d-flex justify-content-center mb-2">
+                        <div class="p-2 large-icon-button">
+                            <input type="checkbox" class="btn-check" name="categorie_chambre" id="categorie_chambre_studio" autocomplete="off" >
+                            <label class="btn btn-outline-basic p-3 square-button"  for="categorie_chambre_studio"> Studio simple (chambre + salon )  </label>
+                        </div>
+                        <div class="p-2 large-icon-button">
+                            <input type="checkbox" class="btn-check" name="categorie_chambre" id="categorie_chambre_studio_moderne" autocomplete="off" >
+                            <label class="btn btn-outline-basic p-3"  for="categorie_chambre_studio_moderne"> Studio moderne (chambre + salon + douche interne)  </label>
+                        </div>
+                        <div class="p-2 large-icon-button">
+                            <input type="checkbox" class="btn-check" name="categorie_chambre" id="categorie_chambre_appartement" autocomplete="off" >
+                            <label class="btn btn-outline-basic p-4 square-button"  for="categorie_chambre_appartement"> Appartement  </label>
+                        </div>    
+                    </div>
+                    <br><hr><br>
+
+                     <div class="question">
+                        <label class="title">Prix de chambre</label>
+                        <label class="subtitle">Indiquez l'intervalle de prix de la chambre que vous désirez</label>
+                    </div>
+                    <div class="form-row p-4">
+                        <div class="form-group">
+                            <label for="prix_min">Min</label>
+                            <input type="number" name="prix_min" id="prix_min" placeholder="Ex: 15000" />
+                        </div>
+                        <div class="form-group">
+                            <label for="prix_max">Max</label>
+                            <input type="number" name="prix_max" id="prix_max" placeholder="Ex: 30000" />
+                        </div>
+                    </div>
+                    
+                    <br><hr><br>
+
+                    <div class="question">
+                        <label class="title">Spécifications de la chambre</label>
+                        <label class="subtitle">Cochez les spécificités indispensables à la chambre de vos rêves</label>
+                    </div>
+                    <div class="d-flex justify-content-center mb-2">
+                        <div class="p-2 large-icon-button">
+                            <input type="checkbox" class="btn-check" name="details_chambre" id="detail_chambre_equipee" autocomplete="off" >
+                            <label class="btn btn-outline-basic p-3"  for="detail_chambre_equipee"> <i class="zmdi zmdi-shopping-basket zmdi-hc-3x"></i> <br> Chambre bien équipée  </label>
+                        </div>
+                        <div class="p-2 large-icon-button">
+                            <input type="checkbox" class="btn-check" name="details_chambre" id="detail_chambre_eau" autocomplete="off" >
+                            <label class="btn btn-outline-basic p-3"  for="detail_chambre_eau"> <i  class="zmdi zmdi-shopping-basket zmdi-hc-3x"></i> <br> Eau dans la chambre </label>
+                        </div>
+                        <div class="p-2 large-icon-button">
+                            <input type="checkbox" class="btn-check" name="details_chambre" id="detail_chambre_prises" autocomplete="off" >
+                            <label class="btn btn-outline-basic p-3"  for="detail_chambre_prises"> <i  class="zmdi zmdi-shopping-basket zmdi-hc-3x"></i> <br> Multiple prises électriques  </label>
+                        </div> 
+                        <div class="p-2 large-icon-button">
+                            <input type="checkbox" class="btn-check" name="details_chambre" id="detail_chambre_wc" autocomplete="off" >
+                            <label class="btn btn-outline-basic p-3"  for="detail_chambre_wc"> <i  class="zmdi zmdi-shopping-basket zmdi-hc-3x"></i> <br> Cabine de wc moderne  </label>
+                        </div>   
+                    </div>
+                    <br>
+                    <div class="question">
+                        <label class="subtitle">Renseignez tous les détails supplémentaires de la chambre que vous recherchez</label>
+                    </div>
+                    <div >
+                        <textarea name="commentaires" id="" cols="30" rows="30" placeholder="Détails supplémentaires" style="height:250px"></textarea>
+                    </div>
+                   
+                </fieldset>
+                
+
+    </div>
+
+    <!-- JS -->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="assets/vendor/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="assets/vendor/jquery-steps/jquery.steps.min.js"></script>
+    <script src="assets/js/request-form-script.js"></script>
+</body>
+</html>
